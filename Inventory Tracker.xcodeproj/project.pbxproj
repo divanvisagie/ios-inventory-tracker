@@ -8,13 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		867A7E462185EF1200CFA86A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867A7E452185EF1200CFA86A /* AppDelegate.swift */; };
-		867A7E482185EF1200CFA86A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867A7E472185EF1200CFA86A /* ViewController.swift */; };
+		867A7E482185EF1200CFA86A /* InventoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867A7E472185EF1200CFA86A /* InventoryViewController.swift */; };
 		867A7E4B2185EF1200CFA86A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 867A7E492185EF1200CFA86A /* Main.storyboard */; };
 		867A7E4E2185EF1200CFA86A /* Inventory_Tracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 867A7E4C2185EF1200CFA86A /* Inventory_Tracker.xcdatamodeld */; };
 		867A7E502185EF1300CFA86A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 867A7E4F2185EF1300CFA86A /* Assets.xcassets */; };
 		867A7E532185EF1300CFA86A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 867A7E512185EF1300CFA86A /* LaunchScreen.storyboard */; };
 		867A7E5E2185EF1300CFA86A /* Inventory_TrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867A7E5D2185EF1300CFA86A /* Inventory_TrackerTests.swift */; };
 		867A7E692185EF1300CFA86A /* Inventory_TrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867A7E682185EF1300CFA86A /* Inventory_TrackerUITests.swift */; };
+		86F48E3021875CF60091ED18 /* InventoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F48E2F21875CF60091ED18 /* InventoryService.swift */; };
+		A81D6751631C9DCE90FAF171 /* Pods_Inventory_TrackerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36ABA79BCAF0C24FB97600B1 /* Pods_Inventory_TrackerTests.framework */; };
+		BF63725DFA6034E5BD1E964F /* Pods_Inventory_Tracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FA59824F17B8322C70DF711 /* Pods_Inventory_Tracker.framework */; };
+		D8D7AC1FC368A2A78FA3E2E8 /* Pods_Inventory_TrackerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C64E1A38107359A5EC3625AE /* Pods_Inventory_TrackerUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,9 +39,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		36ABA79BCAF0C24FB97600B1 /* Pods_Inventory_TrackerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Inventory_TrackerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		48981AF02FF2785623471F33 /* Pods-Inventory TrackerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Inventory TrackerUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Inventory TrackerUITests/Pods-Inventory TrackerUITests.release.xcconfig"; sourceTree = "<group>"; };
+		82EEAC44253638D180BC0487 /* Pods-Inventory TrackerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Inventory TrackerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Inventory TrackerUITests/Pods-Inventory TrackerUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		867A7E422185EF1200CFA86A /* Inventory Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Inventory Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		867A7E452185EF1200CFA86A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		867A7E472185EF1200CFA86A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		867A7E472185EF1200CFA86A /* InventoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryViewController.swift; sourceTree = "<group>"; };
 		867A7E4A2185EF1200CFA86A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		867A7E4D2185EF1200CFA86A /* Inventory_Tracker.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Inventory_Tracker.xcdatamodel; sourceTree = "<group>"; };
 		867A7E4F2185EF1300CFA86A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +56,13 @@
 		867A7E642185EF1300CFA86A /* Inventory TrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Inventory TrackerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		867A7E682185EF1300CFA86A /* Inventory_TrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inventory_TrackerUITests.swift; sourceTree = "<group>"; };
 		867A7E6A2185EF1300CFA86A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		86EF9E53C92A736D46B2CDD4 /* Pods-Inventory Tracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Inventory Tracker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Inventory Tracker/Pods-Inventory Tracker.debug.xcconfig"; sourceTree = "<group>"; };
+		86F48E2F21875CF60091ED18 /* InventoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryService.swift; sourceTree = "<group>"; };
+		9FA59824F17B8322C70DF711 /* Pods_Inventory_Tracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Inventory_Tracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2A011E4F1CCD951AC6A1165 /* Pods-Inventory Tracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Inventory Tracker.release.xcconfig"; path = "Pods/Target Support Files/Pods-Inventory Tracker/Pods-Inventory Tracker.release.xcconfig"; sourceTree = "<group>"; };
+		C64E1A38107359A5EC3625AE /* Pods_Inventory_TrackerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Inventory_TrackerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8F806FA6AD8C2F0F3FBFA40 /* Pods-Inventory TrackerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Inventory TrackerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Inventory TrackerTests/Pods-Inventory TrackerTests.release.xcconfig"; sourceTree = "<group>"; };
+		FF50BA2DC52BC15A2BF38C56 /* Pods-Inventory TrackerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Inventory TrackerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Inventory TrackerTests/Pods-Inventory TrackerTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF63725DFA6034E5BD1E964F /* Pods_Inventory_Tracker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A81D6751631C9DCE90FAF171 /* Pods_Inventory_TrackerTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +86,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8D7AC1FC368A2A78FA3E2E8 /* Pods_Inventory_TrackerUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7268915F909A5FE3F7FACFA0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				86EF9E53C92A736D46B2CDD4 /* Pods-Inventory Tracker.debug.xcconfig */,
+				B2A011E4F1CCD951AC6A1165 /* Pods-Inventory Tracker.release.xcconfig */,
+				FF50BA2DC52BC15A2BF38C56 /* Pods-Inventory TrackerTests.debug.xcconfig */,
+				E8F806FA6AD8C2F0F3FBFA40 /* Pods-Inventory TrackerTests.release.xcconfig */,
+				82EEAC44253638D180BC0487 /* Pods-Inventory TrackerUITests.debug.xcconfig */,
+				48981AF02FF2785623471F33 /* Pods-Inventory TrackerUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		867A7E392185EF1200CFA86A = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +113,8 @@
 				867A7E5C2185EF1300CFA86A /* Inventory TrackerTests */,
 				867A7E672185EF1300CFA86A /* Inventory TrackerUITests */,
 				867A7E432185EF1200CFA86A /* Products */,
+				7268915F909A5FE3F7FACFA0 /* Pods */,
+				B96C4B710FA12D72AA29366F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,12 +132,13 @@
 			isa = PBXGroup;
 			children = (
 				867A7E452185EF1200CFA86A /* AppDelegate.swift */,
-				867A7E472185EF1200CFA86A /* ViewController.swift */,
+				867A7E472185EF1200CFA86A /* InventoryViewController.swift */,
 				867A7E492185EF1200CFA86A /* Main.storyboard */,
 				867A7E4F2185EF1300CFA86A /* Assets.xcassets */,
 				867A7E512185EF1300CFA86A /* LaunchScreen.storyboard */,
 				867A7E542185EF1300CFA86A /* Info.plist */,
 				867A7E4C2185EF1200CFA86A /* Inventory_Tracker.xcdatamodeld */,
+				86F48E2F21875CF60091ED18 /* InventoryService.swift */,
 			);
 			path = "Inventory Tracker";
 			sourceTree = "<group>";
@@ -128,6 +161,16 @@
 			path = "Inventory TrackerUITests";
 			sourceTree = "<group>";
 		};
+		B96C4B710FA12D72AA29366F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9FA59824F17B8322C70DF711 /* Pods_Inventory_Tracker.framework */,
+				36ABA79BCAF0C24FB97600B1 /* Pods_Inventory_TrackerTests.framework */,
+				C64E1A38107359A5EC3625AE /* Pods_Inventory_TrackerUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +178,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 867A7E6D2185EF1300CFA86A /* Build configuration list for PBXNativeTarget "Inventory Tracker" */;
 			buildPhases = (
+				5C92EA557439CEE5BC0AF3F8 /* [CP] Check Pods Manifest.lock */,
 				867A7E3E2185EF1200CFA86A /* Sources */,
 				867A7E3F2185EF1200CFA86A /* Frameworks */,
 				867A7E402185EF1200CFA86A /* Resources */,
+				BB19417CA20DA26D68E28EA2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -152,6 +197,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 867A7E702185EF1300CFA86A /* Build configuration list for PBXNativeTarget "Inventory TrackerTests" */;
 			buildPhases = (
+				3E085E72E279996EB3D1668E /* [CP] Check Pods Manifest.lock */,
 				867A7E552185EF1300CFA86A /* Sources */,
 				867A7E562185EF1300CFA86A /* Frameworks */,
 				867A7E572185EF1300CFA86A /* Resources */,
@@ -170,6 +216,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 867A7E732185EF1300CFA86A /* Build configuration list for PBXNativeTarget "Inventory TrackerUITests" */;
 			buildPhases = (
+				3B79A500A7CAFD31946F5ABC /* [CP] Check Pods Manifest.lock */,
 				867A7E602185EF1300CFA86A /* Sources */,
 				867A7E612185EF1300CFA86A /* Frameworks */,
 				867A7E622185EF1300CFA86A /* Resources */,
@@ -254,12 +301,92 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3B79A500A7CAFD31946F5ABC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Inventory TrackerUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3E085E72E279996EB3D1668E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Inventory TrackerTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5C92EA557439CEE5BC0AF3F8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Inventory Tracker-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BB19417CA20DA26D68E28EA2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Inventory Tracker/Pods-Inventory Tracker-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Inventory Tracker/Pods-Inventory Tracker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		867A7E3E2185EF1200CFA86A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				867A7E482185EF1200CFA86A /* ViewController.swift in Sources */,
+				86F48E3021875CF60091ED18 /* InventoryService.swift in Sources */,
+				867A7E482185EF1200CFA86A /* InventoryViewController.swift in Sources */,
 				867A7E4E2185EF1200CFA86A /* Inventory_Tracker.xcdatamodeld in Sources */,
 				867A7E462185EF1200CFA86A /* AppDelegate.swift in Sources */,
 			);
@@ -432,9 +559,11 @@
 		};
 		867A7E6E2185EF1300CFA86A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 86EF9E53C92A736D46B2CDD4 /* Pods-Inventory Tracker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9669QFDP93;
 				INFOPLIST_FILE = "Inventory Tracker/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -449,9 +578,11 @@
 		};
 		867A7E6F2185EF1300CFA86A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B2A011E4F1CCD951AC6A1165 /* Pods-Inventory Tracker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9669QFDP93;
 				INFOPLIST_FILE = "Inventory Tracker/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -466,6 +597,7 @@
 		};
 		867A7E712185EF1300CFA86A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FF50BA2DC52BC15A2BF38C56 /* Pods-Inventory TrackerTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -486,6 +618,7 @@
 		};
 		867A7E722185EF1300CFA86A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E8F806FA6AD8C2F0F3FBFA40 /* Pods-Inventory TrackerTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -506,6 +639,7 @@
 		};
 		867A7E742185EF1300CFA86A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 82EEAC44253638D180BC0487 /* Pods-Inventory TrackerUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -525,6 +659,7 @@
 		};
 		867A7E752185EF1300CFA86A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 48981AF02FF2785623471F33 /* Pods-Inventory TrackerUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
