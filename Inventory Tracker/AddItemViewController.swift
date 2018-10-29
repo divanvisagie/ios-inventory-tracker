@@ -9,6 +9,28 @@
 import UIKit
 
 class AddItemViewController: UIViewController {
+    
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var descriptionTextField: UITextField!
+    
+    @IBAction func cancelPressed(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+        
+    }
+    
+    @IBAction func addPressed(_ sender: Any) {
+        
+        let description = descriptionTextField.text ?? ""
+    
+        if let name = nameTextField.text {
+            inventoryService.addItem(withName: name, andDescription: description)
+        } else {
+            print("We need a name to continue")
+        }
+        dismiss(animated: true, completion: nil)
+    }
+    
+    var inventoryService = InventoryService()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +43,7 @@ class AddItemViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    
     /*
     // MARK: - Navigation
 

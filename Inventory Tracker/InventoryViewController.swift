@@ -12,16 +12,51 @@ class InventoryViewController: UITableViewController {
     
     var inventoryItems: [InventoryItem] = []
     var inventoryService = InventoryService()
+    
+    
+    override lazy var refreshControl: UIRefreshControl? = {
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action:
+            #selector(InventoryViewController.handleRefresh(_:)),
+                                 for: UIControlEvents.valueChanged)
+        refreshControl.tintColor = UIColor.red
+        
+        return refreshControl
+    }()
+    
+    @objc func handleRefresh(_ refreshControl: UIRefreshControl) {
+        
+        refresh()
+        
+        self.tableView.reloadData()
+        refreshControl.endRefreshing()
+    }
+    
+    func refresh() {
+        inventoryService.getInventoryItems { items in
+            self.inventoryItems = items
+            self.tableView.reloadData()
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
         print("view did load")
-        inventoryService.getInventoryItems { items in
-            self.inventoryItems = items
-            self.tableView.reloadData()
+        if let rc = self.refreshControl {
+            self.tableView.addSubview(rc)
         }
+        
+        refresh()
+    }
+    
+    override func unwind(for unwindSegue: UIStoryboardSegue, towardsViewController subsequentVC: UIViewController) {
+        print("undwind called")
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        print("prepare for the segue")
     }
 
     override func didReceiveMemoryWarning() {

@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -48,11 +49,74 @@
                             <outlet property="delegate" destination="cmI-2r-ua5" id="H01-AH-aB9"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Inventory" id="OZt-RJ-wPU"/>
+                    <navigationItem key="navigationItem" title="Inventory" id="OZt-RJ-wPU">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="6mc-2e-nTg">
+                            <connections>
+                                <segue destination="N4S-AX-NVx" kind="presentation" id="Uap-Ib-6Pt"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pTD-uG-Lnr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-142" y="-122"/>
+        </scene>
+        <!--Add Inventory Item-->
+        <scene sceneID="25u-wz-TcA">
+            <objects>
+                <viewController id="9op-Rr-Fnx" customClass="AddItemViewController" customModule="Inventory_Tracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JK9-ds-PdB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CxA-iC-Jvs">
+                                <rect key="frame" x="16" y="86" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vjs-Gf-MEu">
+                                <rect key="frame" x="16" y="124" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A5a-6h-dVS">
+                                <rect key="frame" x="297" y="162" width="62" height="30"/>
+                                <state key="normal" title="Add Item"/>
+                                <connections>
+                                    <action selector="addPressed:" destination="9op-Rr-Fnx" eventType="touchUpInside" id="ZAS-4E-bZ1"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="A5a-6h-dVS" firstAttribute="top" secondItem="Vjs-Gf-MEu" secondAttribute="bottom" constant="8" id="6Jh-2n-0uv"/>
+                            <constraint firstItem="Vjs-Gf-MEu" firstAttribute="leading" secondItem="Py3-K6-agy" secondAttribute="leading" constant="16" id="6Uc-Vm-AOO"/>
+                            <constraint firstItem="Py3-K6-agy" firstAttribute="trailing" secondItem="Vjs-Gf-MEu" secondAttribute="trailing" constant="16" id="GUA-D3-Nmq"/>
+                            <constraint firstItem="CxA-iC-Jvs" firstAttribute="top" secondItem="Py3-K6-agy" secondAttribute="top" constant="22" id="N7S-fp-ncb"/>
+                            <constraint firstItem="Py3-K6-agy" firstAttribute="trailing" secondItem="A5a-6h-dVS" secondAttribute="trailing" constant="16" id="STY-my-QQ5"/>
+                            <constraint firstItem="Py3-K6-agy" firstAttribute="trailing" secondItem="CxA-iC-Jvs" secondAttribute="trailing" constant="16" id="gSX-jT-thK"/>
+                            <constraint firstItem="CxA-iC-Jvs" firstAttribute="leading" secondItem="Py3-K6-agy" secondAttribute="leading" constant="16" id="r2I-7E-HUf"/>
+                            <constraint firstItem="Vjs-Gf-MEu" firstAttribute="top" secondItem="CxA-iC-Jvs" secondAttribute="bottom" constant="8" id="vZW-oP-3Dm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Py3-K6-agy"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add Inventory Item" id="RhT-bW-hgJ">
+                        <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="aBa-3z-MFp">
+                            <connections>
+                                <action selector="cancelPressed:" destination="9op-Rr-Fnx" id="ZmS-1W-UzY"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="descriptionTextField" destination="Vjs-Gf-MEu" id="xh8-RS-HK8"/>
+                        <outlet property="nameTextField" destination="CxA-iC-Jvs" id="Dce-8B-Dp5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HiY-CZ-dmF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1820" y="-156.07196401799101"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="0pr-A8-geQ">
@@ -69,6 +133,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J4K-xJ-jXe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1094" y="-122"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Of4-eI-NTJ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="N4S-AX-NVx" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="2HV-N4-PbY">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="9op-Rr-Fnx" kind="relationship" relationship="rootViewController" id="1ot-YH-qlV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wpv-BJ-F0d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="880.79999999999995" y="-156.07196401799101"/>
         </scene>
     </scenes>
 </document>

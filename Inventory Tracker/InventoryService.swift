@@ -43,4 +43,22 @@ class InventoryService {
             }
         }
     }
+    
+    func addItem(withName name: String, andDescription description: String = "") {
+        let parameters = [
+            "name": name,
+            "description": description,
+            "count": 1
+            ] as [String : Any]
+        
+        
+        Alamofire.request(base, method: .post, parameters: parameters, encoding: JSONEncoding.default).response { response in
+            
+            if let error = response.error {
+                print("Broke with error \(error)")
+            }
+        }
+        
+      
+    }
 }
