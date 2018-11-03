@@ -33,7 +33,7 @@ class InventoryItem: Mappable {
 }
 
 class Inventory {
-    let base = "http://67.207.78.14/";
+    let base = "http://67.207.78.14";
     
     var inventoryItems =  [InventoryItem]()
     
@@ -68,7 +68,29 @@ class Inventory {
                 self.getInventoryItems()
             }
         }
+    }
+    
+    func removeItem(withIndex index: Int) {
+        let item = self.inventoryItems[index]
+        inventoryItems.remove(at: index)
+        self.removeItem(item: item)
+    }
+    
+    private func removeItem(item: InventoryItem) {
+       
+        if let id = item.id {
+            Alamofire.request("\(base)/\(id)", method: .delete).response { response in
+                
+                if let error = response.error {
+                    print("Broke with error \(error)")
+                } else {
+                    //we need to get an updated version of the list
+                    self.getInventoryItems()
+                }
+            }
+        } else {
+            print("Can't delete on server because item has no id")
+        }
         
-      
     }
 }

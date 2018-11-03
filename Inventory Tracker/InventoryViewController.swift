@@ -61,8 +61,9 @@ class InventoryViewController: UITableViewController {
         if let navigationViewController = segue.destination as? UINavigationController {
             
             if let addItemViewController = navigationViewController.viewControllers.first as? AddItemViewController {
-            
-                    addItemViewController.inventory = inventory
+                
+                
+                addItemViewController.inventory = inventory
             }
             
         } else {
@@ -96,6 +97,14 @@ class InventoryViewController: UITableViewController {
         
         
         return cell!
+    }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        
+        if editingStyle == .delete {
+            inventory.removeItem(withIndex: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        }
     }
 }
 
