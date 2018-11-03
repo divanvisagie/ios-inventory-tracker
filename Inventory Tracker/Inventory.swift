@@ -11,6 +11,10 @@ import Alamofire
 import ObjectMapper
 import AlamofireObjectMapper
 
+extension Notification.Name {
+    static let listUpdated = Notification.Name("listUpdated")
+}
+
 class InventoryItem: Mappable {
     var id: Int?
     var name: String?
@@ -28,16 +32,19 @@ class InventoryItem: Mappable {
 
 }
 
-class InventoryService {
+class Inventory {
     let base = "http://67.207.78.14/";
     
-    func getInventoryItems(callback: @escaping ([InventoryItem]) -> Void) {
+    var inventoryItems =  [InventoryItem]()
+    
+    func getInventoryItems() {
         print("getting from \(base)")
         Alamofire.request(base).responseArray { (response: DataResponse<[InventoryItem]>) in
             
             if let inventoryItems = response.result.value {
                 print(inventoryItems)
-                callback(inventoryItems)
+                self.inventoryItems = inventoryItems
+                NotificationCenter.default.post(name: .listUpdated, object: nil)
             } else {
                 print("There was no object")
             }
@@ -56,6 +63,9 @@ class InventoryService {
             
             if let error = response.error {
                 print("Broke with error \(error)")
+            } else {
+               //we need to get an updated version of the list
+                self.getInventoryItems()
             }
         }
         

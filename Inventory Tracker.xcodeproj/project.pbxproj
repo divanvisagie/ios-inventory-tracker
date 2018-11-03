@@ -16,7 +16,7 @@
 		867A7E5E2185EF1300CFA86A /* Inventory_TrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867A7E5D2185EF1300CFA86A /* Inventory_TrackerTests.swift */; };
 		867A7E692185EF1300CFA86A /* Inventory_TrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867A7E682185EF1300CFA86A /* Inventory_TrackerUITests.swift */; };
 		86F1530021876FE90056955F /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F152FF21876FE90056955F /* AddItemViewController.swift */; };
-		86F48E3021875CF60091ED18 /* InventoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F48E2F21875CF60091ED18 /* InventoryService.swift */; };
+		86F48E3021875CF60091ED18 /* Inventory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F48E2F21875CF60091ED18 /* Inventory.swift */; };
 		A81D6751631C9DCE90FAF171 /* Pods_Inventory_TrackerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36ABA79BCAF0C24FB97600B1 /* Pods_Inventory_TrackerTests.framework */; };
 		BF63725DFA6034E5BD1E964F /* Pods_Inventory_Tracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FA59824F17B8322C70DF711 /* Pods_Inventory_Tracker.framework */; };
 		D8D7AC1FC368A2A78FA3E2E8 /* Pods_Inventory_TrackerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C64E1A38107359A5EC3625AE /* Pods_Inventory_TrackerUITests.framework */; };
@@ -59,7 +59,7 @@
 		867A7E6A2185EF1300CFA86A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		86EF9E53C92A736D46B2CDD4 /* Pods-Inventory Tracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Inventory Tracker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Inventory Tracker/Pods-Inventory Tracker.debug.xcconfig"; sourceTree = "<group>"; };
 		86F152FF21876FE90056955F /* AddItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
-		86F48E2F21875CF60091ED18 /* InventoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryService.swift; sourceTree = "<group>"; };
+		86F48E2F21875CF60091ED18 /* Inventory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inventory.swift; sourceTree = "<group>"; };
 		9FA59824F17B8322C70DF711 /* Pods_Inventory_Tracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Inventory_Tracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2A011E4F1CCD951AC6A1165 /* Pods-Inventory Tracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Inventory Tracker.release.xcconfig"; path = "Pods/Target Support Files/Pods-Inventory Tracker/Pods-Inventory Tracker.release.xcconfig"; sourceTree = "<group>"; };
 		C64E1A38107359A5EC3625AE /* Pods_Inventory_TrackerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Inventory_TrackerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -140,7 +140,7 @@
 				867A7E512185EF1300CFA86A /* LaunchScreen.storyboard */,
 				867A7E542185EF1300CFA86A /* Info.plist */,
 				867A7E4C2185EF1200CFA86A /* Inventory_Tracker.xcdatamodeld */,
-				86F48E2F21875CF60091ED18 /* InventoryService.swift */,
+				86F48E2F21875CF60091ED18 /* Inventory.swift */,
 				86F152FF21876FE90056955F /* AddItemViewController.swift */,
 			);
 			path = "Inventory Tracker";
@@ -389,7 +389,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				86F1530021876FE90056955F /* AddItemViewController.swift in Sources */,
-				86F48E3021875CF60091ED18 /* InventoryService.swift in Sources */,
+				86F48E3021875CF60091ED18 /* Inventory.swift in Sources */,
 				867A7E482185EF1200CFA86A /* InventoryViewController.swift in Sources */,
 				867A7E4E2185EF1200CFA86A /* Inventory_Tracker.xcdatamodeld in Sources */,
 				867A7E462185EF1200CFA86A /* AppDelegate.swift in Sources */,

@@ -10,8 +10,11 @@ import UIKit
 
 class AddItemViewController: UIViewController {
     
+    
+    
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var descriptionTextField: UITextField!
+    
     
     @IBAction func cancelPressed(_ sender: Any) {
         dismiss(animated: true, completion: nil)
@@ -23,14 +26,18 @@ class AddItemViewController: UIViewController {
         let description = descriptionTextField.text ?? ""
     
         if let name = nameTextField.text {
-            inventoryService.addItem(withName: name, andDescription: description)
+            if let inventory = inventory {
+                inventory.addItem(withName: name, andDescription: description)
+            } else {
+                print("There is no inventory")
+            }
         } else {
             print("We need a name to continue")
         }
         dismiss(animated: true, completion: nil)
     }
     
-    var inventoryService = InventoryService()
+    var inventory: Inventory?
 
     override func viewDidLoad() {
         super.viewDidLoad()

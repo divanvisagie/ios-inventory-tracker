@@ -10,33 +10,32 @@ import UIKit
 
 class InventoryViewController: UITableViewController {
     
-    var inventoryItems: [InventoryItem] = []
-    var inventoryService = InventoryService()
-    
+    var inventory = Inventory()
     
     override lazy var refreshControl: UIRefreshControl? = {
         let refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action:
             #selector(InventoryViewController.handleRefresh(_:)),
                                  for: UIControlEvents.valueChanged)
-        refreshControl.tintColor = UIColor.red
+        refreshControl.tintColor = navigationController?.navigationBar.barTintColor
         
         return refreshControl
     }()
     
+    @objc func handleModelUpdate(notification: NSNotification) {
+        tableView.reloadData()
+    }
+    
     @objc func handleRefresh(_ refreshControl: UIRefreshControl) {
-        
         refresh()
-        
         self.tableView.reloadData()
         refreshControl.endRefreshing()
     }
     
+
+    
     func refresh() {
-        inventoryService.getInventoryItems { items in
-            self.inventoryItems = items
-            self.tableView.reloadData()
-        }
+        inventory.getInventoryItems ()
     }
 
     override func viewDidLoad() {
@@ -48,6 +47,8 @@ class InventoryViewController: UITableViewController {
             self.tableView.addSubview(rc)
         }
         
+        NotificationCenter.default.addObserver(self, selector: #selector(handleModelUpdate(notification:)), name: .listUpdated, object: nil)
+        
         refresh()
     }
     
@@ -56,6 +57,17 @@ class InventoryViewController: UITableViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if let navigationViewController = segue.destination as? UINavigationController {
+            
+            if let addItemViewController = navigationViewController.viewControllers.first as? AddItemViewController {
+            
+                    addItemViewController.inventory = inventory
+            }
+            
+        } else {
+            print("There is no destination navigation controller")
+        }
         print("prepare for the segue")
     }
 
@@ -69,14 +81,14 @@ class InventoryViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return inventoryItems.count
+        return inventory.inventoryItems.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "InventoryItemCell")
         
-        let inventoryItem = inventoryItems[indexPath.row]
+        let inventoryItem = inventory.inventoryItems[indexPath.row]
         
     
         cell?.textLabel?.text = inventoryItem.name
